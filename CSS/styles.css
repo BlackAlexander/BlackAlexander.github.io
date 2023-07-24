@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    text-align: center;
+    color: #111111;
+    font-family: "Anaheim", sans-serif;
+}
+
+@font-face{
+    font-family: "Allerta Stencil";
+    src: url("../Assets/Fonts/AllertaStencil-Regular.ttf")
+}
+
+@font-face{
+    font-family: "Anaheim";
+    src: url("../Assets/Fonts/Anaheim-Regular.ttf")
+}
+
+.background-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../Assets/Design/background-emile.jpg');
+    background-repeat: no-repeat;
+    filter: grayscale(20%) brightness(90%);
+    background-size: 100%;
+}
+
+.section {
+    position: relative;
+    z-index: 1;
+}
+
+.flash-logo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 2rem;
+    filter: brightness(0);
+}
+
+.life-skills {
+    font-size: 1.3rem;
+}
+
+.my-name{
+    color: #000000;
+    font-family: "Allerta Stencil", sans-serif;
+    margin-bottom: 5px;
+}
+
+hr{
+    border-color: #000000;
+}
+
+h2{
+    font-size: 1.9rem;
+}
+
+.short-description {
+    background: rgba(255, 255, 255, 0.45);
+    font-size: 1.2rem;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    margin: 20px 30%;
+}
+
+.contact-me {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.25);
+    color: #ececec;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    margin: 20px 30%;
+    padding: 1px 30px 20px;
+}
+
+.my-work {
+    display: flex;
+    justify-content: center;
+}
+
+.my-projects{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    width: 80%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 20px;
+}
+
+.project-item {
+    color: #111111;
+    text-decoration: none;
+    background: rgba(255, 253, 253, 0.45);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    border: 3px solid transparent;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    width: 95%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+    .short-description, .contact-me {
+        margin: 15px 10%;
+    }
+    .background-container {
+        background-size: cover;
+    }
+    .my-projects {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .work-title {
+        color: #ececec;
+    }
+}
+
+.project-item:hover {
+    border: 3px solid darkorange;
+}
+
+.link-icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.project-item-left-column{
+    width: 10%;
+}
+
+.project-item-right-column{
+    width: 90%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.project-item-title {
+    font-weight: bold;
+}
